@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate professional and responsive article pages with SEO and Open Graph optimized metadata.">
+    <meta name="keywords" content="Article Generator, SEO Optimized, Open Graph, Modern UI, Fast Webpages">
+    <meta name="author" content="Likhon Sheikh">
+    <meta property="og:title" content="Article Pages Generator">
+    <meta property="og:description" content="Create responsive and SEO-optimized article pages with advanced UI and features.">
+    <meta property="og:image" content="https://your-image-url.com/og-image.jpg">
+    <meta property="og:url" content="https://pages-generator.vercel.app/article">
+    <title>Article Pages Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Article Pages Generator</h1>
+            <p>Generate SEO-optimized and responsive article pages with advanced metadata and dynamic features.</p>
+        </header>
+
+        <form id="articleForm">
+            <label for="title">Article Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">Article Content:</label>
+            <textarea id="content" name="content" rows="6" required></textarea>
+
+            <label for="thumbnail">Thumbnail Image URL:</label>
+            <input type="url" id="thumbnail" name="thumbnail" required>
+
+            <label for="seoTags">SEO Tags (comma separated):</label>
+            <input type="text" id="seoTags" name="seoTags" required>
+
+            <button type="submit">Generate Article</button>
+        </form>
+
+        <div class="output" id="output" style="display: none;">
+            <h2>Generated Article HTML</h2>
+            <pre id="generatedHTML"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("articleForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const title = document.getElementById("title").value;
+            const content = document.getElementById("content").value;
+            const thumbnail = document.getElementById("thumbnail").value;
+            const seoTags = document.getElementById("seoTags").value;
+
+            // Generate dynamic article HTML
+            const articleHTML = `
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="${content}">
+                <meta name="keywords" content="${seoTags}">
+                <meta property="og:image" content="${thumbnail}">
+                <meta property="og:title" content="${title}">
+                <meta property="og:description" content="${content}">
+                <title>${title}</title>
+            </head>
+            <body>
+                <article>
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                </article>
+            </body>
+            </html>
+            `;
+
+            // Display generated HTML
+            document.getElementById("generatedHTML").textContent = articleHTML;
+            document.getElementById("output").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
