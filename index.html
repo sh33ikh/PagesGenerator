@@ -1,37 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern Website Generator with Blogs, Articles, Portfolios, and Statistics.">
-    <meta name="keywords" content="Web Generator, Blogs, Articles, Portfolios, Statistics, Modern UI">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description" content="Pages Generator Pro - Your all-in-one solution for creating professional web pages. Generate HTML, Markdown, MDX, React components, and more with advanced SEO optimization.">
+    <meta name="keywords" content="page generator, web development, HTML generator, markdown editor, MDX, React components, static sites, dynamic pages, SEO optimization">
     <meta name="author" content="Likhon Sheikh">
-    <meta property="og:title" content="Web Pages Generator">
-    <meta property="og:description" content="Generate SEO Optimized Web Pages for Blogs, Articles, Portfolios, and Statistics">
-    <title>Web Pages Generator</title>
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pages Generator Pro - Professional Web Page Generator">
+    <meta property="og:description" content="Create stunning web pages with advanced features, SEO optimization, and modern design patterns.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pages-generator.vercel.app">
+    <meta property="og:image" content="https://pages-generator.vercel.app/assets/og-image.jpg">
+    <meta property="og:site_name" content="Pages Generator Pro">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pages Generator Pro">
+    <meta name="twitter:description" content="Professional web page generator with advanced features and modern design patterns.">
+    <meta name="twitter:image" content="https://pages-generator.vercel.app/assets/twitter-card.jpg">
+    
+    <title>Pages Generator Pro - Create Professional Web Pages Instantly</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Page Styles -->
+    <style>
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .search-bar {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            background: #f8f9fa;
+            transition: var(--transition);
+        }
+        
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+            background: white;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .quick-link {
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .quick-link:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .navigation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .nav-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <h1>Welcome to Web Pages Generator</h1>
-        <p>Create modern, responsive web pages with ease!</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="blogs/index.html">Blogs</a></li>
-            <li><a href="articles/index.html">Articles</a></li>
-            <li><a href="portfolio/index.html">Portfolio</a></li>
-            <li><a href="statistics/index.html">Statistics</a></li>
-        </ul>
+    <!-- Modern Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="nav-brand">
+                    <i class="fas fa-code"></i> Pages Generator Pro
+                </a>
+                <div class="nav-links">
+                    <a href="https://t.me/RektDevelopers" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-telegram"></i> Join Community
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <footer>
-        <p>Powered by <a href="https://t.me/RektDevelopers" target="_blank">RektDevelopers</a></p>
-        <p>All Rights Reserved &copy; 2024</p>
-    </footer>
-</body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="text-center">Create Professional Web Pages Instantly</h1>
+            <p class="text-center">Choose from multiple frameworks and technologies to generate your perfect web page.</p>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search templates, frameworks, or features..." id="searchInput">
+            </div>
 
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <a href="/HTML/" class="quick-link">HTML</a>
+                <a href="/React/" class="quick-link">React</a>
+                <a href="/Markdown/" class="quick-link">Markdown</a>
+                <a href="/Blog/" class="quick-link">Blog</a>
+                <a href="/Portfolio/" class="quick-link">Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Frameworks Section -->
+        <section class="features-grid">
+            <a href="/HTML/" class="category-card">
+                <i class="fab fa-html5 category-icon"></i>
+                <h3>HTML Templates</h3>
+                <p>Create static websites with modern HTML5 and CSS3</p>
+            </a>
+            <a href="/Markdown/" class="category-card">
+                <i class="fas fa-file-alt category-icon"></i>
+                <h3>Markdown Pages</h3>
+                <p>Generate clean documentation and blog posts</p>
+            </a>
+            <a href="/MDX/" class="category-card">
+                <i class="fas fa-file-code category-icon"></i>
+                <h3>MDX Components</h3>
+                <p>Combine Markdown with JSX components</p>
+            </a>
+            <a href="/React/" class="category-card">
+                <i class="fab fa-react category-icon"></i>
+                <h3>React Components</h3>
+                <p>Build interactive UI components</p>
+            </a>
+        </section>
+
+        <!-- All Pages Navigation -->
+        <section class="navigation-grid">
+            <!-- Development -->
+            <div class="nav-section">
+                <h3>Development</h3>
+                <div class="nav-links">
+                    <a href="/HTML/" class="nav-link">HTML</a>
+                    <a href="/Markdown/" class="nav-link">Markdown</a>
+                    <a href="/MDX/" class="nav-link">MDX</a>
+                    <a href="/AMP/" class="nav-link">AMP</a>
+                    <a href="/PHP/" class="nav-link">PHP</a>
+                    <a href="/React/" class="nav-link">React</a>
+                    <a href="/Static/" class="nav-link">Static</a>
+                    <a href="/Dynamic/" class="nav-link">Dynamic</a>
+                    <a href="/SPA/" class="nav-link">SPA</a>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="nav-section">
+                <h3>Content</h3>
+                <div class="nav-links">
+                    <a href="/Blog/" class="nav-link">Blog</a>
+                    <a href="/Article/" class="nav-link">Article</a>
+                    <a href="/Portfolio/" class="nav-link">Portfolio</a>
+                    <a href="/Documentation/" class="nav-link">Documentation</a>
+                    <a href="/News/" class="nav-link">News</a>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="nav-section">
+                <h3>Features</h3>
+                <div class="nav-links">
+                    <a href="/Landing/" class="nav-link">Landing</a>
+                    <a href="/Ecommerce/" class="nav-link">Ecommerce</a>
+                    <a href="/Product/" class="nav-link">Product</a>
+                    <a href="/Dashboard/" class="nav-link">Dashboard</a>
+                    <a href="/Profile/" class="nav-link">Profile</a>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="nav-section">
+                <h3>Support</h3>
+                <div class="nav-links">
+                    <a href="/About/" class="nav-link">About</a>
+                    <a href="/Contact/" class="nav-link">Contact</a>
+                    <a href="/FAQ/" class="nav-link">FAQ</a>
+                    <a href="/Terms/" class="nav-link">Terms</a>
+                    <a href="/Error/404.html" class="nav-link">Error Pages</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Pages Generator Pro</h3>
+                    <p>Create professional web pages instantly</p>
+                </div>
+                <div>
+                    <h4>Community</h4>
+                    <p>Join us on <a href="https://t.me/RektDevelopers" target="_blank">Telegram</a></p>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <div class="nav-links">
+                        <a href="/Terms/" class="nav-link">Terms of Service</a>
+                        <a href="/Privacy/" class="nav-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-2">&copy; 2024 Pages Generator Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script>
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const links = document.querySelectorAll('.nav-link');
+            
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                const parent = link.closest('.nav-section');
+                
+                if (text.includes(searchTerm)) {
+                    link.style.display = 'block';
+                    if (parent) parent.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                    if (parent && Array.from(parent.querySelectorAll('.nav-link'))
+                        .every(l => l.style.display === 'none')) {
+                        parent.style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.category-card, .nav-section').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
