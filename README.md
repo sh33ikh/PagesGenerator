@@ -2,52 +2,50 @@
 
 ![Pages Generator Logo](https://pages-generator.vercel.app/assets/og-image.jpg)
 
-**Pages Generator** is a cutting-edge open-source tool designed to help you generate fully responsive, SEO-optimized websites effortlessly. Whether you're building a blog, portfolio, or documentation site, **Pages Generator** streamlines the process, making it fast, efficient, and incredibly user-friendly.
+Welcome to **Pages Generator**, a powerful open-source tool for generating fully responsive, SEO-optimized websites. Whether you're building a blog, portfolio, or documentation site, **Pages Generator** simplifies the process, providing a fast and efficient way to get your site live.
 
 ## ✨ Key Features
 
-### 🌟 SEO-Optimized Pages
-Create static HTML pages that are optimized for search engines, improving your site's visibility and search rankings on Google and other platforms.
+### 🌟 SEO-Friendly Pages
+Generate static HTML pages that are fully optimized for search engines, improving visibility and ranking.
 
-### 📱 Fully Responsive Design
-Pages adapt automatically to mobile, tablet, and desktop screens, ensuring a seamless user experience across all devices.
+### 📱 Fully Responsive Layouts
+Automatically adjusts for mobile, tablet, and desktop screens, providing a seamless experience across all devices.
 
 ### 💻 Live Preview
-Instantly see your changes reflected in real-time as you build your page, making the process of prototyping and iteration more efficient.
+Instantly view changes in real-time as you generate your site, making it easy to test and prototype.
 
 ### 📚 Markdown & MDX Support
-Write clean content with Markdown and easily integrate React components using MDX, allowing for advanced layouts and dynamic content.
+Write your content using Markdown and embed advanced React components with MDX for dynamic layouts.
 
-### 🔗 Access to Public Resources
-Use free public icons, images, and other media resources to enrich your pages, adding interactivity and engaging visuals without any licensing restrictions.
+### 🔗 Free Public Resources
+Enhance your pages with free icons, images, and media, without worrying about licensing.
 
 ---
 
 ## 🚀 Try Pages Generator Today!
 
-Experience the power of **Pages Generator** in action by checking out the live demo.
+Check out the live demo and start building your SEO-friendly and responsive pages.
 
-[🔗 Pages Generator Live Demo](https://pages-generator.vercel.app/)
+[🔗 Live Demo: Pages Generator](https://pages-generator.vercel.app/)
 
 ---
 
 ## 💡 Why Star and Fork?
 
-### ⭐ Show Your Support
-By starring the repository, you help others discover **Pages Generator** and make it a more visible and popular tool for developers.
+### ⭐ Star the Repository
+Support the project and help others discover **Pages Generator** by starring the repository. The more stars, the more exposure!
 
-### 🍴 Fork and Contribute
-Fork the repository to experiment with your own ideas or submit contributions—whether bug fixes, new features, or improvements. Every contribution helps improve the tool!
+### 🍴 Fork the Repository
+Fork the repository to try your own ideas, contribute enhancements, or fix bugs. Every contribution matters.
 
-**Together, we can make Pages Generator the go-to solution for building professional websites!** 
-
-[Star the Repository](https://github.com/sh33ikh/PagesGenerator) and [Fork it to Contribute](https://github.com/sh33ikh/PagesGenerator).
+[Star the Repo](https://github.com/sh33ikh/PagesGenerator) and [Fork It](https://github.com/sh33ikh/PagesGenerator).
 
 ---
 
 ## 🤝 Join the Community
 
-Become part of the growing **Pages Generator** community! Stay connected, ask questions, share ideas, and contribute.
+Engage with fellow developers and users. Ask questions, share ideas, and stay updated.
 
 - **Telegram Community**: [Rekt Developers](https://t.me/RektDevelopers)
 - **GitHub Repository**: [Pages Generator on GitHub](https://github.com/sh33ikh/PagesGenerator)
@@ -57,17 +55,37 @@ Become part of the growing **Pages Generator** community! Stay connected, ask qu
 
 ## 📑 License Information
 
-This project is licensed under the **MIT License**. For more details, refer to the [LICENSE](LICENSE) file.
+This project is licensed under the **MIT License**. For more details, check the [LICENSE](LICENSE) file.
 
 ---
 
 ## 📸 Screenshots
 
+Here are some examples of pages generated with **Pages Generator**:
+
 ![Screenshot 1](https://pages-generator.vercel.app/assets/example-image.jpg)
 
 ---
 
-### 🌐 Want to Learn More?
-Explore **Pages Generator** in action, contribute to its development, and connect with like-minded developers in the **Rekt Developers** community!
+## 🌐 Want to Learn More?
+
+Explore **Pages Generator** in-depth, contribute, or connect with developers:
+
+- **Official Website**: [Pages Generator Demo](https://pages-generator.vercel.app/)
+- **GitHub Repo**: [Pages Generator on GitHub](https://github.com/sh33ikh/PagesGenerator)
+- **Join the Community**: [Telegram - Rekt Developers](https://t.me/RektDevelopers)
 
 ---
+
+## 💬 Contact
+
+For support, feedback, or suggestions, reach out:
+
+- **Email**: [sh33ikh@outlook.com](mailto:sh33ikh@outlook.com)
+- **Telegram**: [Rekt Developers](https://t.me/RektDevelopers)
+
+---
+
+## 📝 License
+
+Pages Generator is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
