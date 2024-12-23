@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create interactive statistics pages with dynamic data visualizations.">
+    <meta name="keywords" content="Statistics, Charts, Data Visualization, SEO Optimized, Web Analytics">
+    <meta name="author" content="Likhon Sheikh">
+    <meta property="og:title" content="Statistics Page Generator">
+    <meta property="og:description" content="Generate dynamic statistics pages with interactive charts and graphs.">
+    <meta property="og:image" content="https://your-image-url.com/og-image.jpg">
+    <meta property="og:url" content="https://pages-generator.vercel.app/statistics">
+    <title>Statistics Pages Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Statistics Pages Generator</h1>
+            <p>Generate interactive statistics pages with charts and graphs for data visualization.</p>
+        </header>
+
+        <form id="statisticsForm">
+            <label for="chartTitle">Chart Title:</label>
+            <input type="text" id="chartTitle" name="chartTitle" required>
+
+            <label for="dataPoints">Data Points (comma separated):</label>
+            <input type="text" id="dataPoints" name="dataPoints" required>
+
+            <button type="submit">Generate Statistics</button>
+        </form>
+
+        <div class="output" id="output" style="display: none;">
+            <h2>Generated Statistics Page</h2>
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.getElementById("statisticsForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const chartTitle = document.getElementById("chartTitle").value;
+            const dataPoints = document.getElementById("dataPoints").value.split(',').map(Number);
+
+            // Chart.js logic for dynamic chart creation
+            const ctx = document.getElementById('chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: dataPoints.map((_, index) => `Label ${index + 1}`),
+                    datasets: [{
+                        label: chartTitle,
+                        data: dataPoints,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            document.getElementById("output").style.display = "block";
+        });
+    </script>
+</body>
+</html>
