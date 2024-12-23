@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate high-performance responsive blog pages with advanced SEO, Open Graph, and dynamic features.">
+    <meta name="keywords" content="Blog Generator, SEO Optimized, Modern UI, Fast Webpages, PageSpeed Insights, Open Graph">
+    <meta name="author" content="Likhon Sheikh">
+    <meta name="location" content="Bangladesh">
+    <meta name="time" content="2024-12-23">
+    <meta property="og:title" content="Blogs Pages Generator">
+    <meta property="og:description" content="Generate responsive, SEO-optimized blog pages with advanced UI and custom features.">
+    <meta property="og:image" content="https://your-image-url.com/og-image.jpg">
+    <meta property="og:url" content="https://your-website-url.com">
+    <title>Blogs Pages Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Blogs Pages Generator</h1>
+            <p>Generate responsive and SEO-optimized blog pages with dynamic metadata and advanced UI.</p>
+        </header>
+
+        <div class="auth">
+            <p>Please join our Telegram channel <a href="https://t.me/RektDevelopers" target="_blank">RektDevelopers</a> to access the generator. After joining, verify with the bot using your token.</p>
+        </div>
+
+        <form id="blogForm">
+            <label for="title">Blog Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Blog Description (Markdown):</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="thumbnail">Thumbnail Image URL (OG & Meta):</label>
+            <input type="url" id="thumbnail" name="thumbnail" required>
+
+            <label for="seoTags">SEO Tags (comma separated):</label>
+            <input type="text" id="seoTags" name="seoTags" required>
+
+            <button type="submit">Generate Blog</button>
+        </form>
+
+        <div class="output" id="output" style="display: none;">
+            <h2>Generated Blog HTML</h2>
+            <pre id="generatedHTML"></pre>
+        </div>
+
+        <footer>
+            <p>Powered by <a href="https://t.me/RektDevelopers" target="_blank">RektDevelopers</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("blogForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const thumbnail = document.getElementById("thumbnail").value;
+            const seoTags = document.getElementById("seoTags").value;
+
+            // Check if the user is verified with the Telegram bot
+            const isVerified = true; // Example, should be handled via backend
+
+            if (isVerified) {
+                // Generate dynamic blog HTML
+                const blogHTML = `
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta name="description" content="${description}">
+                    <meta name="keywords" content="${seoTags}">
+                    <meta property="og:image" content="${thumbnail}">
+                    <meta property="og:title" content="${title}">
+                    <meta property="og:description" content="${description}">
+                    <title>${title}</title>
+                </head>
+                <body>
+                    <article>
+                        <h1>${title}</h1>
+                        <p>${description}</p>
+                    </article>
+                </body>
+                </html>
+                `;
+
+                // Display generated HTML
+                document.getElementById("generatedHTML").textContent = blogHTML;
+                document.getElementById("output").style.display = "block";
+            } else {
+                alert("You need to join the Telegram channel and verify before using the generator.");
+            }
+        });
+    </script>
+</body>
+
+</html>
