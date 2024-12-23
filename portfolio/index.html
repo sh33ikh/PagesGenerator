@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showcase your work with a modern portfolio page, optimized for SEO and Open Graph sharing.">
+    <meta name="keywords" content="Portfolio Generator, SEO Optimized, Open Graph, Web Developer Portfolio, Creative Works">
+    <meta name="author" content="Likhon Sheikh">
+    <meta property="og:title" content="Portfolio Generator">
+    <meta property="og:description" content="Create professional and SEO-optimized portfolio pages to showcase your work.">
+    <meta property="og:image" content="https://your-image-url.com/og-image.jpg">
+    <meta property="og:url" content="https://pages-generator.vercel.app/portfolio">
+    <title>Portfolio Pages Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Portfolio Pages Generator</h1>
+            <p>Generate modern, responsive, and SEO-optimized portfolio pages to showcase your work.</p>
+        </header>
+
+        <form id="portfolioForm">
+            <label for="name">Project Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Project Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="image">Project Image URL:</label>
+            <input type="url" id="image" name="image" required>
+
+            <label for="seoTags">SEO Tags (comma separated):</label>
+            <input type="text" id="seoTags" name="seoTags" required>
+
+            <button type="submit">Generate Portfolio</button>
+        </form>
+
+        <div class="output" id="output" style="display: none;">
+            <h2>Generated Portfolio HTML</h2>
+            <pre id="generatedHTML"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("portfolioForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const name = document.getElementById("name").value;
+            const description = document.getElementById("description").value;
+            const image = document.getElementById("image").value;
+            const seoTags = document.getElementById("seoTags").value;
+
+            // Generate dynamic portfolio HTML
+            const portfolioHTML = `
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="${description}">
+                <meta name="keywords" content="${seoTags}">
+                <meta property="og:image" content="${image}">
+                <meta property="og:title" content="${name}">
+                <meta property="og:description" content="${description}">
+                <title>${name}</title>
+            </head>
+            <body>
+                <article>
+                    <h1>${name}</h1>
+                    <p>${description}</p>
+                    <img src="${image}" alt="${name}">
+                </article>
+            </body>
+            </html>
+            `;
+
+            // Display generated HTML
+            document.getElementById("generatedHTML").textContent = portfolioHTML;
+            document.getElementById("output").style.display = "block";
+        });
+    </script>
+</body>
+</html>
