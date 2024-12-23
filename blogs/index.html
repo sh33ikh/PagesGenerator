@@ -1,104 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Generate high-performance responsive blog pages with advanced SEO, Open Graph, and dynamic features.">
     <meta name="keywords" content="Blog Generator, SEO Optimized, Modern UI, Fast Webpages, PageSpeed Insights, Open Graph">
     <meta name="author" content="Likhon Sheikh">
-    <meta name="location" content="Bangladesh">
-    <meta name="time" content="2024-12-23">
-    <meta property="og:title" content="Blogs Pages Generator">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Blog Pages Generator - Create Professional Blog Pages">
     <meta property="og:description" content="Generate responsive, SEO-optimized blog pages with advanced UI and custom features.">
-    <meta property="og:image" content="https://your-image-url.com/og-image.jpg">
-    <meta property="og:url" content="https://your-website-url.com">
-    <title>Blogs Pages Generator</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://pages-generator.vercel.app/assets/og-image.jpg">
+    <meta property="og:url" content="https://pages-generator.vercel.app/Blog/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Pages Generator">
+    <meta name="twitter:description" content="Create professional blog pages with advanced features and SEO optimization">
+    
+    <title>Blog Pages Generator - Create Professional Blog Content</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Page-specific styles -->
+    <style>
+        .blog-form {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .output {
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        pre {
+            overflow-x: auto;
+            background: #2d2d2d;
+            color: #ffffff;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="nav-link">Pages Generator</a>
+                <div class="nav-links">
+                    <a href="/HTML/" class="nav-link">HTML</a>
+                    <a href="/Markdown/" class="nav-link">Markdown</a>
+                    <a href="/MDX/" class="nav-link">MDX</a>
+                    <a href="/AMP/" class="nav-link">AMP</a>
+                    <a href="/PHP/" class="nav-link">PHP</a>
+                    <a href="/React/" class="nav-link">React</a>
+                    <a href="/Static/" class="nav-link">Static</a>
+                    <a href="/Dynamic/" class="nav-link">Dynamic</a>
+                    <a href="/Blog/" class="nav-link">Blog</a>
+                    <a href="/Article/" class="nav-link">Article</a>
+                    <a href="/Portfolio/" class="nav-link">Portfolio</a>
+                    <a href="/About/" class="nav-link">About</a>
+                    <a href="/Contact/" class="nav-link">Contact</a>
+                    <a href="/FAQ/" class="nav-link">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <header>
-            <h1>Blogs Pages Generator</h1>
+        <header class="text-center mt-2 mb-2">
+            <h1>Blog Pages Generator</h1>
             <p>Generate responsive and SEO-optimized blog pages with dynamic metadata and advanced UI.</p>
         </header>
 
-        <div class="auth">
+        <div class="auth card mb-2">
             <p>Please join our Telegram channel <a href="https://t.me/RektDevelopers" target="_blank">RektDevelopers</a> to access the generator. After joining, verify with the bot using your token.</p>
         </div>
 
-        <form id="blogForm">
-            <label for="title">Blog Title:</label>
-            <input type="text" id="title" name="title" required>
+        <form id="blogForm" class="blog-form">
+            <div class="form-group">
+                <label for="title">Blog Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
 
-            <label for="description">Blog Description (Markdown):</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
+            <div class="form-group">
+                <label for="description">Blog Description (Markdown):</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
 
-            <label for="thumbnail">Thumbnail Image URL (OG & Meta):</label>
-            <input type="url" id="thumbnail" name="thumbnail" required>
+            <div class="form-group">
+                <label for="thumbnail">Thumbnail Image URL (OG & Meta):</label>
+                <input type="url" id="thumbnail" name="thumbnail" required>
+            </div>
 
-            <label for="seoTags">SEO Tags (comma separated):</label>
-            <input type="text" id="seoTags" name="seoTags" required>
+            <div class="form-group">
+                <label for="seoTags">SEO Tags (comma separated):</label>
+                <input type="text" id="seoTags" name="seoTags" required>
+            </div>
 
-            <button type="submit">Generate Blog</button>
+            <button type="submit" class="btn btn-primary">Generate Blog</button>
         </form>
 
         <div class="output" id="output" style="display: none;">
             <h2>Generated Blog HTML</h2>
             <pre id="generatedHTML"></pre>
         </div>
-
-        <footer>
-            <p>Powered by <a href="https://t.me/RektDevelopers" target="_blank">RektDevelopers</a></p>
-        </footer>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Pages Generator</h3>
+                    <p>Create professional web pages instantly</p>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <p>Join us on <a href="https://t.me/RektDevelopers" target="_blank">Telegram</a></p>
+                </div>
+            </div>
+            <p class="text-center mt-2">&copy; 2024 Pages Generator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript with validation and error handling -->
     <script>
         document.getElementById("blogForm").addEventListener("submit", function (event) {
             event.preventDefault();
 
-            // Get form data
-            const title = document.getElementById("title").value;
-            const description = document.getElementById("description").value;
-            const thumbnail = document.getElementById("thumbnail").value;
-            const seoTags = document.getElementById("seoTags").value;
+            try {
+                // Get form data
+                const title = document.getElementById("title").value.trim();
+                const description = document.getElementById("description").value.trim();
+                const thumbnail = document.getElementById("thumbnail").value.trim();
+                const seoTags = document.getElementById("seoTags").value.trim();
 
-            // Check if the user is verified with the Telegram bot
-            const isVerified = true; // Example, should be handled via backend
+                // Validate inputs
+                if (!title || !description || !thumbnail || !seoTags) {
+                    throw new Error("All fields are required");
+                }
 
-            if (isVerified) {
-                // Generate dynamic blog HTML
-                const blogHTML = `
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <meta name="description" content="${description}">
-                    <meta name="keywords" content="${seoTags}">
-                    <meta property="og:image" content="${thumbnail}">
-                    <meta property="og:title" content="${title}">
-                    <meta property="og:description" content="${description}">
-                    <title>${title}</title>
-                </head>
-                <body>
-                    <article>
-                        <h1>${title}</h1>
-                        <p>${description}</p>
-                    </article>
-                </body>
-                </html>
-                `;
+                // Validate URL
+                try {
+                    new URL(thumbnail);
+                } catch {
+                    throw new Error("Please enter a valid URL for the thumbnail");
+                }
+
+                // Generate dynamic blog HTML with enhanced meta tags
+                const blogHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="${description}">
+    <meta name="keywords" content="${seoTags}">
+    <meta name="author" content="Pages Generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="${title}">
+    <meta property="og:description" content="${description}">
+    <meta property="og:image" content="${thumbnail}">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${title}">
+    <meta name="twitter:description" content="${description}">
+    <meta name="twitter:image" content="${thumbnail}">
+    
+    <title>${title}</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <article class="container">
+        <header class="mt-2 mb-2">
+            <h1>${title}</h1>
+            <img src="${thumbnail}" alt="${title}" class="featured-image">
+        </header>
+        <div class="content">
+            ${description}
+        </div>
+    </article>
+</body>
+</html>`;
 
                 // Display generated HTML
                 document.getElementById("generatedHTML").textContent = blogHTML;
                 document.getElementById("output").style.display = "block";
-            } else {
-                alert("You need to join the Telegram channel and verify before using the generator.");
+                document.getElementById("output").scrollIntoView({ behavior: "smooth" });
+
+            } catch (error) {
+                alert(error.message || "An error occurred while generating the blog page");
             }
         });
     </script>
 </body>
-
 </html>
